@@ -1,7 +1,8 @@
 *.lock
 *.eld
-*desktop
+emacs-desktop*
 auto-save-list/*
 elpa/*
 ede-projects*
 semanticdb/*
+dired+/*
