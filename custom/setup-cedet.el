@@ -1,7 +1,3 @@
-(require 'cc-mode)
-
-(define-key c-mode-base-map (kbd "<C-tab>") 'company-complete)
-
 (require 'semantic)
 
 (setq semantic-default-submodes '(global-semantic-stickyfunc-mode))
