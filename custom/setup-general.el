@@ -14,15 +14,21 @@
  gdb-show-main t
  )
 
+(use-package cc-mode
+  :init
+  (setq c-default-style "linux"
+        c-basic-offset 4))
+
+(require 'cc-mode)
+(define-key c-mode-base-map (kbd "<C-tab>") 'company-complete)
+
 ;; company
 (use-package company
   :init
   (global-company-mode 1)
   (delete 'company-semantic company-backends))
-;; (define-key c-mode-map  [(control tab)] 'company-complete)
-;; (define-key c++-mode-map  [(control tab)] 'company-complete)
 
-;; Package: projejctile
+;; Package: projectile
 (use-package projectile
   :init
   (projectile-global-mode)
@@ -31,12 +37,9 @@
 ;; Package zygospore
 (use-package zygospore
   :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
-         ("RET" .   newline-and-indent)))
+         ("RET" .   newline-and-indent))) ; automatically indent when press RET
 
-  ; automatically indent when press RET
-
-;; activate whitespace-mode to view all whitespace characters
-(global-set-key (kbd "C-c w") 'whitespace-mode)
+;; *** Find out what this means ***
 (windmove-default-keybindings)
 
 (provide 'setup-general)
