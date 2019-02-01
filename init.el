@@ -72,7 +72,7 @@
 (setq
    backup-by-copying t
    backup-directory-alist
-   '(("." . (concat user-emacs-directory "backups"))))
+   '(("." . "~/.emacs.d/backups")))
 
 ;; Setze das zeitliche Intervall zwischen automatischen Sicherungen
 (setq auto-save-timeout 180)

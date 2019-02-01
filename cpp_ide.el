@@ -28,8 +28,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 
-(require 'function-args)
-(fa-config-default)
+;; *** function-args wird hier nur eingebunden um Zugriff auf moo-jump-local zu haben ***
+;; (require 'function-args)
+;; (fa-config-default)
 
 (require 'setup-general)
 (if (version< emacs-version "24.4")
@@ -39,9 +40,3 @@
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
-
-
-
-;; *** function-args wird hier nur eingebunden um Zugriff auf moo-jump-local zu haben ***
-;; (define-key c-mode-map  [(tab)] 'company-complete)
-;; (define-key c++-mode-map  [(tab)] 'company-complete)
